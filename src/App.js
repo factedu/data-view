@@ -1,23 +1,15 @@
-import logo from './logo.svg';
 import './App.css';
+import BarChart from './components/BarChart';
+import WithAxisBarChart from './components/BarChart/WithAxisBarChart';
+import WithMarginBarChart from './components/BarChart/WithMarginBarChart';
+import D3One from './components/D3One';
+import FlusServeillance from './components/FluServeillance';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <p>DataView</p>
+      <WithAxisBarChart/>
     </div>
   );
 }
