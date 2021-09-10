@@ -1,6 +1,17 @@
-# Getting Started with Create React App
+# Getting Started with DataView
+DataView is a data visualisation tool to showcase data visualisation capability from any data source.
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+## Technolgy Stack
+1. React JS
+2. D3 JS
+
+## Developer Contact
+**Ravi S Singh**
+Email : **factedu@gmail.com**
+
+---
 
 ## Available Scripts
 
