@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { csv, scaleTime, scaleLinear, axisBottom, axisLeft, timeFormat, extent, max, min, line, select } from "d3"
 import chroma from 'chroma-js';
+import { Container, Paper, Typography } from '@material-ui/core';
 
 function LineChart({ width = 900, height = 600, margin = { top: 20, right: 5, bottom: 20, left: 100 } }) {
     const csvUrl = 'https://gist.githubusercontent.com/factedu/3b41e485796936281c246e11512eeb2f/raw/ec8f3462c49f8bdb22095a81ba5c2c2a25e1b608/india_covid_cases_over_time.csv';
@@ -84,18 +85,23 @@ function LineChart({ width = 900, height = 600, margin = { top: 20, right: 5, bo
     }
 
     return (
-        <svg width={width} height={height}>
-            <path d={confirmedCases} fill='none' stroke='red' strokeWidth={4} />
-            <path d={recoveredCases} fill='none' stroke='green' strokeWidth={4} />
+        <Container>
+            <Paper style={{ padding: 16, display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
+                <svg width={width} height={height}>
+                    <path d={confirmedCases} fill='none' stroke='red' strokeWidth={4} />
+                    <path d={recoveredCases} fill='none' stroke='green' strokeWidth={4} />
 
-            <g ref={xGridEl} transform={`translate(0,${height - margin.bottom - margin.top})`} />
-            <g ref={yGridEl} transform={`translate(${margin.left},0)`} />
+                    <g ref={xGridEl} transform={`translate(0,${height - margin.bottom - margin.top})`} />
+                    <g ref={yGridEl} transform={`translate(${margin.left},0)`} />
 
-            <g>
-                <g ref={xAxisEl} transform={`translate(0,${height - margin.bottom - margin.top})`} />
-                <g ref={yAxisEl} transform={`translate(${margin.left},${0})`} />
-            </g>
-        </svg>
+                    <g>
+                        <g ref={xAxisEl} transform={`translate(0,${height - margin.bottom - margin.top})`} />
+                        <g ref={yAxisEl} transform={`translate(${margin.left},${0})`} />
+                    </g>
+                </svg>
+                <Typography variant="h6">Covid-19 Status [India]</Typography>
+            </Paper>
+        </Container>
     )
 }
 
