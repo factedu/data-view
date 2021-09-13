@@ -1,5 +1,5 @@
-import React, { useState, useCallback, useEffect } from 'react'
-import { csv, arc, pie, max, scaleBand, scaleLinear } from 'd3'
+import React, { useState, useEffect } from 'react'
+import { csv, max, scaleBand, scaleLinear } from 'd3'
 
 const csvUrl = "https://gist.githubusercontent.com/curran/0ac4077c7fc6390f5dd33bf5c06cb5ff/raw/605c54080c7a93a417a3cea93fd52e7550e76500/UN_Population_2019.csv";
 
@@ -9,7 +9,7 @@ const margin = { top: 20, right: 20, bottom: 20, left: 200 };
 const innerHeight = height - margin.top - margin.bottom;
 
 const innerWidth = width - margin.left - margin.right;
-console.log(innerHeight, innerWidth);
+
 function WithAxisBarChart() {
     const [data, setData] = useState();
     useEffect(() => {
@@ -18,7 +18,7 @@ function WithAxisBarChart() {
             return d;
         }
         csv(csvUrl, row).then(data => {
-            setData(data.slice(0, 10))
+            setData(data.slice(0, 20))
         });
     }, [])
 
@@ -62,7 +62,10 @@ function WithAxisBarChart() {
                     </g>
                 ))}
                 {data.map(d => (
-                    <rect key={d.Country} fill={'rgba(0,0,0,0.5)'} x={0} y={yScale(d.Country)} width={xScale(d.Population)} height={yScale.bandwidth()} />
+                    <g>
+                        <rect key={d.Country} stroke="white" fill={'rgba(0,0,0,0.5)'} x={0} y={yScale(d.Country)} width={xScale(d.Population)} height={yScale.bandwidth()} />
+                        <text x={10} y={yScale(d.Country)+16} >{d.Population}</text>
+                    </g>
                 ))}
             </g>
         </svg>
