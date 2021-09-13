@@ -1,5 +1,6 @@
 {
   "name": "data-view",
+  "homepage": "https://factedu.github.io/data-view/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -24,7 +25,8 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "build:git": "react-scripts build && rm -rf docs && mv build docs",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
