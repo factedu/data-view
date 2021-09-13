@@ -1,4 +1,7 @@
 import React from 'react';
+import {
+    Link
+} from "react-router-dom";
 import clsx from 'clsx';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import Drawer from '@material-ui/core/Drawer';
@@ -17,6 +20,7 @@ import ListItemIcon from '@material-ui/core/ListItemIcon';
 import ListItemText from '@material-ui/core/ListItemText';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
+import ShowChartIcon from '@material-ui/icons/ShowChart';
 
 import Logo from '../assets/images/dataviewlogo_white.png';
 import { Box } from '@material-ui/core';
@@ -70,6 +74,8 @@ const useStyles = makeStyles((theme) => ({
         [theme.breakpoints.up('sm')]: {
             width: theme.spacing(9) + 1,
         },
+
+
     },
     toolbar: {
         display: 'flex',
@@ -78,6 +84,7 @@ const useStyles = makeStyles((theme) => ({
         padding: theme.spacing(0, 1),
         // necessary for content to be below app bar
         ...theme.mixins.toolbar,
+
     },
     content: {
         flexGrow: 1,
@@ -85,7 +92,7 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export default function MainLayout({children}) {
+export default function MainLayout({ children }) {
     const classes = useStyles();
     const theme = useTheme();
     const [open, setOpen] = React.useState(false);
@@ -119,13 +126,16 @@ export default function MainLayout({children}) {
                     >
                         <MenuIcon />
                     </IconButton>
-                    <Box display="flex" justifyContent="center" alignItems="center">
-                        <img src={Logo} height="50" width="50" style={{marginRight:12}} />
+                    {(!open) && <Box display="flex" justifyContent="center" alignItems="center">
+                        <Link to="/">
+                            <img src={Logo} height="40" width="40" style={{ marginRight: 12 }} />
+                        </Link>
+                        
                         <Typography variant="h6" noWrap>
                             DataView
                         </Typography>
-                    </Box>
-                    
+                    </Box>}
+
                 </Toolbar>
             </AppBar>
             <Drawer
@@ -141,29 +151,28 @@ export default function MainLayout({children}) {
                     }),
                 }}
             >
-                <div className={classes.toolbar}>
-                    <IconButton onClick={handleDrawerClose}>
+                <div className={classes.toolbar} style={{ backgroundColor: theme.palette.primary.main }}>
+                    <Box display="flex" color="white" flexDirection="row" justifyContent="center" alignItems="center">
+                        <Link to="/">
+                            <img src={Logo} height="40" width="40" style={{ marginRight: 12 }} />
+                        </Link>
+                        <Typography variant="h6" noWrap>
+                            DataView
+                        </Typography>
+                    </Box>
+                    <IconButton style={{ color: 'white' }} onClick={handleDrawerClose}>
+
                         {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
                     </IconButton>
                 </div>
                 <Divider />
                 <List>
-                    {['Inbox', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-                        <ListItem button key={text}>
-                            <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-                            <ListItemText primary={text} />
-                        </ListItem>
-                    ))}
+                    <ListItem button to="/covid-19" component={Link}>
+                        <ListItemIcon><ShowChartIcon /></ListItemIcon>
+                        <ListItemText primary={'Covid-19 India'} />
+                    </ListItem>
                 </List>
                 <Divider />
-                <List>
-                    {['All mail', 'Trash', 'Spam'].map((text, index) => (
-                        <ListItem button key={text}>
-                            <ListItemIcon>{index % 2 === 0 ? <InboxIcon /> : <MailIcon />}</ListItemIcon>
-                            <ListItemText primary={text} />
-                        </ListItem>
-                    ))}
-                </List>
             </Drawer>
             <main className={classes.content}>
                 <div className={classes.toolbar} />

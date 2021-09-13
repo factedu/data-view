@@ -8,4 +8,3 @@ DataView is a data visualisation tool to showcase data visualisation capability 
 Name : **Ravi S Singh**
 Email : **factedu@gmail.com**
 
----
