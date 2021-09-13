@@ -1,4 +1,10 @@
 import { createTheme, ThemeProvider } from '@material-ui/core/styles';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 import purple from '@material-ui/core/colors/purple';
 import green from '@material-ui/core/colors/green';
 import BarChart from './components/BarChart';
@@ -24,9 +30,20 @@ function App() {
   });
   return (
     <ThemeProvider theme={theme}>
-      <MainLayout>
-        <AboutScreen/>
-      </MainLayout>
+      <Router>
+        <Switch>
+          <Route exact path="/">
+            <MainLayout>
+              <AboutScreen />
+            </MainLayout>
+          </Route>
+          <Route exact path="/covid-19">
+            <MainLayout>
+              <LineChart />
+            </MainLayout>
+          </Route>
+        </Switch>
+      </Router>
     </ThemeProvider>
   );
 }

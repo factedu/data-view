@@ -1,7 +1,7 @@
 # Getting Started with DataView
 DataView is a data visualisation tool to showcase data visualisation capability from any data source.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+### [Demo Link](https://factedu.github.io/data-view) 
 
 ## Technolgy Stack
 1. React JS
