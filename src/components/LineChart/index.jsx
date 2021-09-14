@@ -77,17 +77,12 @@ function LineChart({ width = 900, height = 600, margin = { top: 20, right: 5, bo
     const makeYGridLines = () => {
         return axisLeft(yScale).ticks(10);
     }
-
-    if (!data) {
-        return (
-            <div>Loading data...</div>
-        )
-    }
-
+    
     return (
         <Container>
             <Paper style={{ padding: 16, display: 'flex', flexDirection: 'column', justifyContent: 'center', alignItems: 'center' }}>
-                <svg width={width} height={height}>
+                {!data && <div>Loading data...</div>}
+                {data && <svg width={width} height={height}>
                     <path d={confirmedCases} fill='none' stroke='red' strokeWidth={4} />
                     <path d={recoveredCases} fill='none' stroke='green' strokeWidth={4} />
 
@@ -98,7 +93,7 @@ function LineChart({ width = 900, height = 600, margin = { top: 20, right: 5, bo
                         <g ref={xAxisEl} transform={`translate(0,${height - margin.bottom - margin.top})`} />
                         <g ref={yAxisEl} transform={`translate(${margin.left},${0})`} />
                     </g>
-                </svg>
+                </svg>}
                 <Typography variant="h6">Covid-19 Status [India]</Typography>
             </Paper>
         </Container>

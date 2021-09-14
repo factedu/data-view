@@ -1,0 +1,23 @@
+
+
+.marks .country {
+  /* stroke: #e672fa;
+  stroke-width: 1;
+  stroke-linejoin: round;
+  stroke-linecap: round; */
+  fill: #9c27b0;
+}
+.marks .interior {
+  stroke: #e672fa;
+  stroke-width: 1;
+  stroke-linejoin: round;
+  stroke-linecap: round;
+  fill: none;
+}
+.marks .sphere{
+    fill: rgb(231, 238, 238);
+}
+.marks .graticule{
+    stroke: #c8c6c9;
+    fill:none;
+}

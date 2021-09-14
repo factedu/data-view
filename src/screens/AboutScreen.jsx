@@ -23,7 +23,7 @@ function AboutScreen() {
                         DataView
                     </Typography>
                 </Box>
-                <ReactMarkdown>{markdownText}</ReactMarkdown>
+                <ReactMarkdown className="markdown-body">{markdownText}</ReactMarkdown>
             </Paper>
         </Container>
     )
