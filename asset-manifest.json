@@ -1,25 +1,26 @@
 {
   "files": {
-    "main.css": "/data-view/static/css/main.6dea0f05.chunk.css",
-    "main.js": "/data-view/static/js/main.8e95864e.chunk.js",
-    "main.js.map": "/data-view/static/js/main.8e95864e.chunk.js.map",
-    "runtime-main.js": "/data-view/static/js/runtime-main.c5c125da.js",
-    "runtime-main.js.map": "/data-view/static/js/runtime-main.c5c125da.js.map",
-    "static/js/2.a596ea56.chunk.js": "/data-view/static/js/2.a596ea56.chunk.js",
-    "static/js/2.a596ea56.chunk.js.map": "/data-view/static/js/2.a596ea56.chunk.js.map",
-    "static/js/3.571a93b4.chunk.js": "/data-view/static/js/3.571a93b4.chunk.js",
-    "static/js/3.571a93b4.chunk.js.map": "/data-view/static/js/3.571a93b4.chunk.js.map",
+    "main.css": "/data-view/static/css/main.9cff0da8.chunk.css",
+    "main.js": "/data-view/static/js/main.aa661dc7.chunk.js",
+    "main.js.map": "/data-view/static/js/main.aa661dc7.chunk.js.map",
+    "runtime-main.js": "/data-view/static/js/runtime-main.b2521045.js",
+    "runtime-main.js.map": "/data-view/static/js/runtime-main.b2521045.js.map",
+    "static/js/2.25478c0a.chunk.js": "/data-view/static/js/2.25478c0a.chunk.js",
+    "static/js/2.25478c0a.chunk.js.map": "/data-view/static/js/2.25478c0a.chunk.js.map",
+    "static/js/3.194d9013.chunk.js": "/data-view/static/js/3.194d9013.chunk.js",
+    "static/js/3.194d9013.chunk.js.map": "/data-view/static/js/3.194d9013.chunk.js.map",
     "index.html": "/data-view/index.html",
-    "static/css/main.6dea0f05.chunk.css.map": "/data-view/static/css/main.6dea0f05.chunk.css.map",
-    "static/js/2.a596ea56.chunk.js.LICENSE.txt": "/data-view/static/js/2.a596ea56.chunk.js.LICENSE.txt",
+    "static/css/main.9cff0da8.chunk.css.map": "/data-view/static/css/main.9cff0da8.chunk.css.map",
+    "static/js/2.25478c0a.chunk.js.LICENSE.txt": "/data-view/static/js/2.25478c0a.chunk.js.LICENSE.txt",
     "static/media/README.5053c0bf.md": "/data-view/static/media/README.5053c0bf.md",
+    "static/media/README.c72a451f.md": "/data-view/static/media/README.c72a451f.md",
     "static/media/dataviewlogo.55ca0f2d.png": "/data-view/static/media/dataviewlogo.55ca0f2d.png",
     "static/media/dataviewlogo_white.70304617.png": "/data-view/static/media/dataviewlogo_white.70304617.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.c5c125da.js",
-    "static/js/2.a596ea56.chunk.js",
-    "static/css/main.6dea0f05.chunk.css",
-    "static/js/main.8e95864e.chunk.js"
+    "static/js/runtime-main.b2521045.js",
+    "static/js/2.25478c0a.chunk.js",
+    "static/css/main.9cff0da8.chunk.css",
+    "static/js/main.aa661dc7.chunk.js"
   ]
 }
