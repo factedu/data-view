@@ -21,6 +21,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 import InboxIcon from '@material-ui/icons/MoveToInbox';
 import MailIcon from '@material-ui/icons/Mail';
 import ShowChartIcon from '@material-ui/icons/ShowChart';
+import PublicIcon from '@material-ui/icons/Public';
 
 import Logo from '../assets/images/dataviewlogo_white.png';
 import { Box } from '@material-ui/core';
@@ -170,6 +171,10 @@ export default function MainLayout({ children }) {
                     <ListItem button to="/covid-19" component={Link}>
                         <ListItemIcon><ShowChartIcon /></ListItemIcon>
                         <ListItemText primary={'Covid-19 India'} />
+                    </ListItem>
+                    <ListItem button to="/world-map" component={Link}>
+                        <ListItemIcon><PublicIcon /></ListItemIcon>
+                        <ListItemText primary={'World Map'} />
                     </ListItem>
                 </List>
                 <Divider />

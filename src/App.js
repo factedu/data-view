@@ -16,6 +16,7 @@ import LineChart from './components/LineChart';
 import AppBarComponent from './ui.components/AppBarComponent';
 import MainLayout from './layouts/main.layout';
 import AboutScreen from './screens/AboutScreen';
+import WorldMapScreen from './screens/WorldMapScreen';
 
 function App() {
   const theme = createTheme({
@@ -40,6 +41,11 @@ function App() {
           <Route exact path="/covid-19">
             <MainLayout>
               <LineChart />
+            </MainLayout>
+          </Route>
+          <Route exact path="/world-map">
+            <MainLayout>
+              <WorldMapScreen />
             </MainLayout>
           </Route>
         </Switch>
